@@ -1,5 +1,9 @@
 package models;
 
+/**
+ * Clase que representa un paciente
+ * Incluye su nombre, sintomas y codigo de emergencia que servirá para determinar el orden en que se le atenderá.
+ */
 public class Patient implements Comparable<Patient> {
 
 	String name;
@@ -7,6 +11,12 @@ public class Patient implements Comparable<Patient> {
 	String emergencyCode;
 	int emergencyCodeInt;
 	
+	/**
+	*Constructor
+	*@param name - nombre del paciente
+	*@param sympton - síntomas presentados
+	*@param emergencyCode - código de emergencia
+	*/
 	public Patient(String name, String sympton, String emergencyCode) {
 		
 		this.name = name;
@@ -15,23 +25,23 @@ public class Patient implements Comparable<Patient> {
 		
 		switch (emergencyCode) {
 		
-		case " A":
+		case "A":
 			this.emergencyCodeInt = 1;
 			break;
 			
-		case " B":
+		case "B":
 			this.emergencyCodeInt = 2;
 			break;
 			
-		case " C":
+		case "C":
 			this.emergencyCodeInt = 3;
 			break;
 			
-		case " D":
+		case "D":
 			this.emergencyCodeInt = 4;
 			break;
 			
-		case " E":
+		case "E":
 			this.emergencyCodeInt = 5;
 			break;
 			

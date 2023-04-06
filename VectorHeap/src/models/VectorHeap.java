@@ -2,11 +2,23 @@ package models;
 import java.util.Vector;
 import interfaces.PriorityQueue;
 //Estructura tomada del libro de texto
+
+/**
+ * Clase VectorHeap representa una PriorityQueue usando vectores
+ * Ordena por prioridad, siendo A la menor y E la mayor
+ * 
+ * @param <E> Tipo de elementos en el heap, en este caso pacientes.
+ */
+
 public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 {
 
 	protected Vector<E> data; // the data, kept in heap order
 
+
+    /**
+     * Constructor
+     */
 	public VectorHeap()
 	// post: constructs a new priority queue
 	{
@@ -115,25 +127,24 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
 	@Override
 	public E getFirst() {
-		// TODO Auto-generated method stub
-		return null;
+		if (data.isEmpty()) {
+	        throw new IllegalStateException("Priority queue is empty");
+	    }
+	    return data.get(0);
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return data.size() == 0;
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return data.size();
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		data.clear();
 	}
 }
