@@ -15,23 +15,23 @@ public class Patient {
 		
 		switch (emergencyCode) {
 		
-		case "A":
+		case " A":
 			this.emergencyCodeInt = 1;
 			break;
 			
-		case "B":
+		case " B":
 			this.emergencyCodeInt = 2;
 			break;
 			
-		case "C":
+		case " C":
 			this.emergencyCodeInt = 3;
 			break;
 			
-		case "D":
+		case " D":
 			this.emergencyCodeInt = 4;
 			break;
 			
-		case "E":
+		case " E":
 			this.emergencyCodeInt = 5;
 			break;
 			

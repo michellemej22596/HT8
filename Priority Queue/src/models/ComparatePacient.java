@@ -1,5 +1,4 @@
 package models;
-
 import java.util.Comparator;
 
 public class ComparatePacient implements Comparator<Patient> {
@@ -9,7 +8,4 @@ public class ComparatePacient implements Comparator<Patient> {
 		return o1.getEmergencyCodeInt() - o2.getEmergencyCodeInt();
 		
 	}
-	
-	
-
 }
